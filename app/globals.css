@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+body {
+  background-color: black;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+.search-form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.04);
+}
+
+.search-form .input-control {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.search-form .input-control input {
+  padding: 1rem 2rem;
+  outline: none;
+  border-radius: 12px;
+  background-color: #fafafa;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 500;
+  color: #333;
+  transition: all 0.3s ease;
+  border: 2px solid #fafafa;
+  box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-form .input-control input:focus {
+  outline: none;
+  border: 2px solid #7263f3;
+}
+
+.search-form .input-control input::placeholder {
+  color: #333;
+  opacity: 0.3;
+}
+
+.search-form .input-control .submit-btn {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #7263f3;
+  cursor: pointer;
+  font-weight: 500;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+
+.search-results::-webkit-scrollbar {
+  width: 0;
+}
+
+
+
+
+
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsl(200, 20%, 80%);
+  }
+  100% {
+    background-color: hsl(200, 20%, 95%);
+  }
+}
+
+
+.spinner {
+  -webkit-animation: rotator 1.4s linear infinite;
+  animation: rotator 1.4s linear infinite;
+}
+
+@-webkit-keyframes rotator {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(270deg);
+    transform: rotate(270deg);
+  }
+}
+@keyframes rotator {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(270deg);
+    transform: rotate(270deg);
+  }
+}
+.path {
+  stroke-dasharray: 187;
+  stroke-dashoffset: 0;
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
+  -webkit-animation: dash 1.4s ease-in-out infinite, colors 5.6s ease-in-out infinite;
+  animation: dash 1.4s ease-in-out infinite, colors 5.6s ease-in-out infinite;
+}
+
+@-webkit-keyframes colors {
+  0% {
+    stroke: #A8A77A; /* Normal */
+  }
+  5.555555556% {
+    stroke: #EE8130; /* Fire */
+  }
+  11.111111111% {
+    stroke: #6390F0; /* Water */
+  }
+  16.666666667% {
+    stroke: #F7D02C; /* Electric */
+  }
+  22.222222222% {
+    stroke: #7AC74C; /* Grass */
+  }
+  27.777777778% {
+    stroke: #96D9D6; /* Ice */
+  }
+  33.333333333% {
+    stroke: #C22E28; /* Fighting */
+  }
+  38.888888889% {
+    stroke: #A33EA1; /* Poison */
+  }
+  44.444444444% {
+    stroke: #E2BF65; /* Ground */
+  }
+  50% {
+    stroke: #A98FF3; /* Flying */
+  }
+  55.555555556% {
+    stroke: #F95587; /* Psychic */
+  }
+  61.111111111% {
+    stroke: #A6B91A; /* Bug */
+  }
+  66.666666667% {
+    stroke: #B6A136; /* Rock */
+  }
+  72.222222222% {
+    stroke: #735797; /* Ghost */
+  }
+  77.777777778% {
+    stroke: #6F35FC; /* Dragon */
+  }
+  83.333333333% {
+    stroke: #705746; /* Dark */
+  }
+  88.888888889% {
+    stroke: #B7B7CE; /* Steel */
+  }
+  94.444444444% {
+    stroke: #D685AD; /* Fairy */
+  }
+  100% {
+    stroke: #A8A77A; /* Normal */
+  }
+}
+@keyframes colors {
+  0% {
+    stroke: #A8A77A; /* Normal */
+  }
+  5.555555556% {
+    stroke: #EE8130; /* Fire */
+  }
+  11.111111111% {
+    stroke: #6390F0; /* Water */
+  }
+  16.666666667% {
+    stroke: #F7D02C; /* Electric */
+  }
+  22.222222222% {
+    stroke: #7AC74C; /* Grass */
+  }
+  27.777777778% {
+    stroke: #96D9D6; /* Ice */
+  }
+  33.333333333% {
+    stroke: #C22E28; /* Fighting */
+  }
+  38.888888889% {
+    stroke: #A33EA1; /* Poison */
+  }
+  44.444444444% {
+    stroke: #E2BF65; /* Ground */
+  }
+  50% {
+    stroke: #A98FF3; /* Flying */
+  }
+  55.555555556% {
+    stroke: #F95587; /* Psychic */
+  }
+  61.111111111% {
+    stroke: #A6B91A; /* Bug */
+  }
+  66.666666667% {
+    stroke: #B6A136; /* Rock */
+  }
+  72.222222222% {
+    stroke: #735797; /* Ghost */
+  }
+  77.777777778% {
+    stroke: #6F35FC; /* Dragon */
+  }
+  83.333333333% {
+    stroke: #705746; /* Dark */
+  }
+  88.888888889% {
+    stroke: #B7B7CE; /* Steel */
+  }
+  94.444444444% {
+    stroke: #D685AD; /* Fairy */
+  }
+  100% {
+    stroke: #A8A77A; /* Normal */
+  }
+}
+@-webkit-keyframes dash {
+  0% {
+    stroke-dashoffset: 187;
+  }
+  50% {
+    stroke-dashoffset: 46.75;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+  }
+  100% {
+    stroke-dashoffset: 187;
+    -webkit-transform: rotate(450deg);
+    transform: rotate(450deg);
+  }
+}
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 187;
+  }
+  50% {
+    stroke-dashoffset: 46.75;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+  }
+  100% {
+    stroke-dashoffset: 187;
+    -webkit-transform: rotate(450deg);
+    transform: rotate(450deg);
+  }
+}
+
+
+.animate-next:hover{
+  animation: bounce-next 1s infinite;
+}
+
+@keyframes bounce-next {
+  0%, 100% {
+    transform: translateX(0%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateX(25%);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+.animate-prev:hover{
+  animation: bounce-prev 1s infinite;
+}
+
+@keyframes bounce-prev {
+  0%, 100% {
+    transform: translateX(0%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateX(-25%);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
