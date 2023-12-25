@@ -8,6 +8,7 @@ export function PokemonImage({ image, name, className }) {
       alt={name}
       width={250}
       height={250}
+      priority={true}
       className={`transition-opacity opacity-0 duration-[2s ${className}]`}
       onLoad={(e) => e.target.classList.remove("opacity-0")}
     />

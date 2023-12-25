@@ -16,6 +16,12 @@ export default async function PokemonPage({ params }) {
   } else if (pokemonId === 10001) {
     nextPokemonId = pokemonId + 1;
     prevPokemonId = 1025;
+  } else if (pokemonId === 1) {
+    nextPokemonId = pokemonId + 1;
+    prevPokemonId = pokemonId + 0;
+  } else if (pokemonId == 10277) {
+    nextPokemonId = pokemonId + 0;
+    prevPokemonId = pokemonId - 1;
   } else {
     nextPokemonId = pokemonId + 1;
     prevPokemonId = pokemonId - 1;
@@ -80,7 +86,7 @@ export default async function PokemonPage({ params }) {
             {prevPokemonObject.sprites.other.showdown.front_default || prevPokemonObject.sprites.front_default || prevPokemonObject.sprites.other['official-artwork'].front_default ? (
               <Link href={prevPokemonObject.name} className="flex items-center">
                 <p>←Prev</p>
-                <Image src={prevPokemonObject.sprites.other.showdown.front_default || prevPokemonObject.sprites.front_default || prevPokemonObject.sprites.other['official-artwork'].front_default} alt={prevPokemonObject.name} width={50} height={50} className="rounded-full object-contain" style={{
+                <Image src={prevPokemonObject.sprites.other.showdown.front_default || prevPokemonObject.sprites.front_default || prevPokemonObject.sprites.other['official-artwork'].front_default} alt={prevPokemonObject.name} width={50} height={50} className="rounded-full object-contain" priority={true} style={{
                   width: '50px',
                   height: '50px',
                 }} />
@@ -164,7 +170,7 @@ export default async function PokemonPage({ params }) {
           <div className="animate-next rounded-full  border-2 p-[3px] object-contain text-center">
             {nextPokemonObject.sprites.other.showdown.front_default || nextPokemonObject.sprites.front_default || nextPokemonObject.sprites.other['official-artwork'].front_default ? (
               <Link href={nextPokemonObject.name} className="object-contain flex items-center">
-                <Image src={nextPokemonObject.sprites.other.showdown.front_default || nextPokemonObject.sprites.front_default || nextPokemonObject.sprites.other['official-artwork'].front_default} alt={nextPokemonObject.name} width={50} height={50} className="rounded-full object-contain" style={{
+                <Image src={nextPokemonObject.sprites.other.showdown.front_default || nextPokemonObject.sprites.front_default || nextPokemonObject.sprites.other['official-artwork'].front_default} alt={nextPokemonObject.name} width={50} height={50} className="rounded-full object-contain" priority={true} style={{
                   width: '50px',
                   height: '50px',
                 }} />
